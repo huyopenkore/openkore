@@ -185,7 +185,7 @@ itemsTakeAuto_new 0
 itemsTakeGreed 0
 itemsCheckWeight 1
 
-lockMap pay_fild01
+lockMap pay_fild07
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -242,7 +242,7 @@ statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
 skillsAddAuto 1
-skillsAddAuto_list Increase HP Recovery 10, Sword Mastery 1, Two Handed Sword Mastery 10
+skillsAddAuto_list Increase HP Recovery 10, Sword Mastery 1, Two Handed Sword Mastery 10, Bash 10
 
 tankMode 0
 tankModeTarget
@@ -691,6 +691,11 @@ useSelf_item {
 
 useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Novice Potion {
 	hp < 70%
+}
+
+attackSkillSlot Bash {
+	dist 1.5
+	maxUses 1
 }
 
 ######## Autostorage/autosell ########
