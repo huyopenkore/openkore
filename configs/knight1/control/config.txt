@@ -242,7 +242,7 @@ statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
 skillsAddAuto 1
-skillsAddAuto_list Increase HP Recovery 10, Sword Mastery 1, Two Handed Sword Mastery 10, Bash 10
+skillsAddAuto_list Increase HP Recovery 10, Sword Mastery 1, Two Handed Sword Mastery 10, Bash 10, Provoke 5, Endure 1, Magnum Break 2, Twohand Quicken 10, Peco Peco Ride 1, Cavalier Mastery 5
 
 tankMode 0
 tankModeTarget
@@ -693,9 +693,16 @@ useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Novice Potion {
 	hp < 70%
 }
 
+useSelf_skill Twohand Quicken {
+	whenStatusInactive Twohand Quicken
+	notInTown 1
+	timeout 10
+}
+
 attackSkillSlot Bash {
 	dist 1.5
 	maxUses 1
+	sp > 65
 }
 
 ######## Autostorage/autosell ########

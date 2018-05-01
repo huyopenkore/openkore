@@ -8,7 +8,7 @@ server 1
 username
 password
 loginPinCode
-char
+char 0
 
 # Poseidon Settings (http://wiki.openkore.com/index.php/PoseidonServer)
 # They must be the same as Query Server config in Poseidon.txt
@@ -36,7 +36,7 @@ XKore_ID
 
 # It is not advised to set secureAdminPassword if you're using Xkore 2
 secureAdminPassword 1
-adminPassword fresteha
+adminPassword shuzosat
 callSign
 commandPrefix ;
 callSignGM 0
@@ -59,7 +59,7 @@ alias_heal sp 28
 allowedMaps
 allowedMaps_reaction 1
 
-attackAuto 2
+attackAuto -1
 attackAuto_party 1
 attackAuto_onlyWhenSafe 0
 attackAuto_followTarget 1
@@ -186,8 +186,8 @@ itemsTakeGreed 0
 itemsCheckWeight 1
 
 lockMap pay_fild07
-lockMap_x
-lockMap_y
+lockMap_x 23
+lockMap_y 207
 lockMap_randX
 lockMap_randY
 
@@ -195,10 +195,10 @@ route_escape_reachedNoPortal 1
 route_escape_randomWalk 1
 route_escape_shout
 route_avoidWalls 1
-route_randomWalk 1
+route_randomWalk 0
 route_randomWalk_inTown 0
 route_randomWalk_maxRouteTime 75
-route_maxWarpFee 0
+route_maxWarpFee
 route_maxNpcTries 5
 route_teleport 0
 route_teleport_minDistance 150
@@ -237,12 +237,12 @@ sitAuto_look_from_wall
 sitTensionRelax 0
 
 statsAddAuto 1
-statsAddAuto_list 31 dex, 99 agi
+statsAddAuto_list
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
 skillsAddAuto 1
-skillsAddAuto_list Increase HP Recovery 10, Sword Mastery 1, Two Handed Sword Mastery 10, Bash 10, Provoke 5, Endure 1, Magnum Break 2, Twohand Quicken 10, Peco Peco Ride 1, Cavalier Mastery 5
+skillsAddAuto_list Enlarge Weight Limit 10
 
 tankMode 0
 tankModeTarget
@@ -558,6 +558,21 @@ useSelf_skill_smartHeal 1
 
 partySkillDistance 0..8
 
+useSelf_skill Blessing {
+	timeout 3
+	whenStatusInactive Blessing
+}
+
+useSelf_skill Increase AGI {
+	timeout 5
+	whenStatusInactive Increase AGI
+	notWhileSitting 1
+}
+
+useSelf_skill Summon Spirit Sphere {
+	spirit < 5
+}
+
 partySkill {
 	lvl 10
 	dist 3
@@ -693,18 +708,6 @@ useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Novice Potion {
 	hp < 70%
 }
 
-useSelf_skill Twohand Quicken {
-	whenStatusInactive Twohand Quicken
-	notInTown 1
-	timeout 10
-}
-
-attackSkillSlot Bash {
-	dist 1.5
-	maxUses 1
-	sp > 65
-}
-
 ######## Autostorage/autosell ########
 
 buyAuto Butterfly Wing {
@@ -715,7 +718,7 @@ buyAuto Butterfly Wing {
 	minAmount 1
 	maxAmount 3
 	batchSize
-	disabled 0
+	disabled 1
 }
 
 sellAuto 1
