@@ -185,7 +185,8 @@ itemsTakeAuto_new 0
 itemsTakeGreed 0
 itemsCheckWeight 1
 
-lockMap pay_fild07
+#lockMap pay_fild07
+lockMap hu_fild06
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -213,7 +214,8 @@ route_reAddMissingPortals 1
 runFromTarget 0
 runFromTarget_dist 6
 
-saveMap payon
+#saveMap payon
+saveMap hugel
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
 memo1
@@ -237,12 +239,12 @@ sitAuto_look_from_wall
 sitTensionRelax 0
 
 statsAddAuto 1
-statsAddAuto_list 21 dex, 2 int, 31 agi, 8 int, 99 agi
+statsAddAuto_list 21 dex, 2 int, 31 agi, 8 int, 98 agi
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
 skillsAddAuto 1
-skillsAddAuto_list Divine Protection 5, Blessing 10, Heal 3, Increase Agi 10, Heal 6, Ruwach 1, Teleport 2
+skillsAddAuto_list Divine Protection 5, Blessing 10, Heal 3, Increase Agi 10, Heal 6, Ruwach 1, Teleport 2, Divine Protection 10, Demon Bane 10, Iron Fists 2, Summon Spirit Sphere 5, Iron Fists 5, Flee 5, Raging Trifecta Blow 10, Root 2, Spiritual Cadence 5, Flee 10, Iron Fists 10
 
 tankMode 0
 tankModeTarget
@@ -578,6 +580,20 @@ useSelf_skill Summon Spirit Sphere {
 	spirit < 5
 }
 
+partySkill Blessing {
+	timeout 3
+	target_whenStatusInactive Blessing
+	notWhileSitting 1
+	target_timeout 240
+}
+
+partySkill Increase AGI {
+	timeout 5
+	target_whenStatusInactive Increase AGI
+	notWhileSitting 1
+	target_timeout 240
+}
+
 partySkill {
 	lvl 10
 	dist 3
@@ -715,8 +731,14 @@ useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Novice Potion {
 
 ######## Autostorage/autosell ########
 
+# Tool Dealer
+# payon 159 96
+
+# Kafra
+# payon 181 104
+
 buyAuto Butterfly Wing {
-	npc payon 159 96
+	npc hu_in01 241 368
 	standpoint
 	distance 5
 	price
@@ -727,13 +749,13 @@ buyAuto Butterfly Wing {
 }
 
 sellAuto 1
-sellAuto_npc payon 159 96
+sellAuto_npc hu_in01 241 368
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s
 
 storageAuto 1
-storageAuto_npc payon 181 104
+storageAuto_npc hugel 88 168
 storageAuto_standpoint
 storageAuto_distance 5
 storageAuto_npc_type 3
