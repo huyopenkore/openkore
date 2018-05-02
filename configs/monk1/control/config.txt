@@ -241,7 +241,7 @@ sitAuto_look_from_wall
 sitTensionRelax 0
 
 statsAddAuto 1
-statsAddAuto_list 21 dex, 2 int, 31 agi, 8 int, 98 agi, 31 dex
+statsAddAuto_list 21 dex, 2 int, 31 agi, 8 int, 98 agi, 41 dex, 31 str
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 

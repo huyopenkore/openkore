@@ -241,7 +241,7 @@ sitAuto_look_from_wall
 sitTensionRelax 0
 
 statsAddAuto 1
-statsAddAuto_list 31 dex, 99 agi, 41 dex
+statsAddAuto_list 31 dex, 99 agi, 51 dex, 31 str
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
@@ -259,7 +259,7 @@ teleportAuto_search 0
 teleportAuto_minAggressives 0
 teleportAuto_minAggressivesInLock 0
 teleportAuto_onlyWhenSafe 0
-teleportAuto_maxDmg 500
+teleportAuto_maxDmg 1500
 teleportAuto_maxDmgInLock 0
 teleportAuto_deadly 1
 teleportAuto_useSkill 1
@@ -755,11 +755,44 @@ minStorageZeny 500
 npcTimeResponse
 npcWrongStepsMethod 0
 
-getAuto {
-	minAmount
-	maxAmount
-	passive
+getAuto Red Herb {
+	minAmount 99
+	maxAmount 100
+	passive 1
 	disabled 0
+	dcOnEmpty 0
+}
+
+getAuto Carrot {
+	minAmount 99
+	maxAmount 100
+	passive 1
+	disabled 0
+	dcOnEmpty 0
+}
+
+getAuto Apple {
+	minAmount 99
+	maxAmount 100
+	passive 1
+	disabled 0
+	dcOnEmpty 0
+}
+
+getAuto Potato {
+	minAmount 99
+	maxAmount 100
+	passive 1
+	disabled 0
+	dcOnEmpty 0
+}
+
+getAuto Milk {
+	minAmount 99
+	maxAmount 100
+	passive 1
+	disabled 0
+	dcOnEmpty 0
 }
 
 ######## Debugging options; only useful for developers ########

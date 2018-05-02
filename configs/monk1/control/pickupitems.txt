@@ -13,3 +13,9 @@ all 1
 # fluff 0
 Green Herb 0
 Iron Ore 0
+Red Herb 0
+Yellow Herb 0
+Carrot 0
+Apple 0
+Potato 0
+Milk 0
