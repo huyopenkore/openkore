@@ -188,9 +188,12 @@ itemsCheckWeight 1
 #lockMap pay_fild07
 #lockMap_x 23
 #lockMap_y 207
-lockMap hu_fild06
-lockMap_x 200
-lockMap_y 367
+#lockMap hu_fild06
+#lockMap_x 200
+#lockMap_y 367
+lockMap cmd_fild06
+lockMap_x 366
+lockMap_y 359
 lockMap_randX
 lockMap_randY
 
@@ -217,7 +220,8 @@ runFromTarget 0
 runFromTarget_dist 6
 
 #saveMap payon
-saveMap hugel
+#saveMap hugel
+saveMap morocc
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
 memo1
@@ -246,7 +250,7 @@ statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
 skillsAddAuto 1
-skillsAddAuto_list Enlarge Weight Limit 10
+skillsAddAuto_list
 
 tankMode 0
 tankModeTarget
@@ -562,21 +566,6 @@ useSelf_skill_smartHeal 1
 
 partySkillDistance 0..8
 
-useSelf_skill Blessing {
-	timeout 3
-	whenStatusInactive Blessing
-}
-
-useSelf_skill Increase AGI {
-	timeout 5
-	whenStatusInactive Increase AGI
-	notWhileSitting 1
-}
-
-useSelf_skill Summon Spirit Sphere {
-	spirit < 5
-}
-
 partySkill {
 	lvl 10
 	dist 3
@@ -725,13 +714,13 @@ buyAuto Butterfly Wing {
 	disabled 1
 }
 
-sellAuto 1
+sellAuto 0
 sellAuto_npc payon 159 96
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s
 
-storageAuto 1
+storageAuto 0
 storageAuto_npc payon 181 104
 storageAuto_standpoint
 storageAuto_distance 5

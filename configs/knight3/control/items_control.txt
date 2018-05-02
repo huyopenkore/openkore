@@ -45,6 +45,7 @@ all 0 1 0
 # Adjust these to your needs
 
 Red Herb 100 1 0
+Yellow Herb 100 1 0
 Carrot 100 1 0
 Apple 100 1 0
 Potato 100 1 0
