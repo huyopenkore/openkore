@@ -8,7 +8,7 @@ server 1
 username
 password
 loginPinCode
-char 0
+char
 
 # Poseidon Settings (http://wiki.openkore.com/index.php/PoseidonServer)
 # They must be the same as Query Server config in Poseidon.txt
@@ -36,11 +36,11 @@ XKore_ID
 
 # It is not advised to set secureAdminPassword if you're using Xkore 2
 secureAdminPassword 1
-adminPassword fribrehe
+adminPassword shecithe
 callSign
 commandPrefix ;
 callSignGM 0
-inGameAuth 0
+inGameAuth 1
 
 pauseCharServer 0
 pauseMapServer 0
@@ -59,7 +59,7 @@ alias_heal sp 28
 allowedMaps
 allowedMaps_reaction 1
 
-attackAuto 2
+attackAuto -1
 attackAuto_party 1
 attackAuto_onlyWhenSafe 0
 attackAuto_followTarget 1
@@ -71,7 +71,7 @@ attackMaxDistance 2.5
 attackMaxRouteDistance 100
 attackMaxRouteTime 4
 attackMinPlayerDistance 2
-attackMinPortalDistance 10
+attackMinPortalDistance 4
 attackUseWeapon 1
 attackNoGiveup 0
 attackCanSnipe 0
@@ -162,7 +162,7 @@ dcOnLevel
 
 follow 0
 followCheckLOS 0
-followTarget
+followTarget Huong
 followEmotion 1
 followEmotion_distance 4
 followFaceDirection 0
@@ -174,9 +174,9 @@ followBot 0
 followRandom 0
 followRandomDistance 4
 
-itemsTakeAuto 2
+itemsTakeAuto 0
 itemsTakeAuto_party 0
-itemsGatherAuto 2
+itemsGatherAuto 0
 itemsMaxWeight 89
 itemsMaxWeight_sellOrStore 48
 itemsMaxNum_sellOrStore 99
@@ -185,11 +185,10 @@ itemsTakeAuto_new 0
 itemsTakeGreed 0
 itemsCheckWeight 1
 
-#lockMap pay_fild07
-#lockMap hu_fild06
-lockMap gef_fild02
-lockMap_x
-lockMap_y
+# prontera 160 95
+lockMap prontera
+lockMap_x 153
+lockMap_y 173
 lockMap_randX
 lockMap_randY
 
@@ -197,10 +196,10 @@ route_escape_reachedNoPortal 1
 route_escape_randomWalk 1
 route_escape_shout
 route_avoidWalls 1
-route_randomWalk 1
+route_randomWalk 0
 route_randomWalk_inTown 0
 route_randomWalk_maxRouteTime 75
-route_maxWarpFee 0
+route_maxWarpFee
 route_maxNpcTries 5
 route_teleport 0
 route_teleport_minDistance 150
@@ -215,9 +214,7 @@ route_reAddMissingPortals 1
 runFromTarget 0
 runFromTarget_dist 6
 
-#saveMap payon
-#saveMap hugel
-saveMap payon
+saveMap geffen
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
 memo1
@@ -225,12 +222,12 @@ memo2
 memo3
 memo4
 
-shopAuto_open 0
+shopAuto_open 1
 shop_random 0
 shop_useSkill 1
 
 sitAuto_hp_lower 40
-sitAuto_hp_upper 70
+sitAuto_hp_upper 50
 sitAuto_sp_lower 0
 sitAuto_sp_upper 0
 sitAuto_follow 0
@@ -240,13 +237,13 @@ sitAuto_look
 sitAuto_look_from_wall
 sitTensionRelax 0
 
-statsAddAuto 1
-statsAddAuto_list 22 dex, 11 agi, 11 str, 21 agi, 21 str, 31 agi, 31 str
-statsAddAuto_dontUseBonus 1
+statsAddAuto 0
+statsAddAuto_list
+statsAddAuto_dontUseBonus 0
 statsAdd_over_99 1
 
 skillsAddAuto 1
-skillsAddAuto_list Double Attack 10, Improve Dodge 10
+skillsAddAuto_list NV_BASIC 9, MC_INCCARRY 3, MC_DISCOUNT 3, MC_OVERCHARGE 10, MC_PUSHCART 3, MC_VENDING 1, MC_PUSHCART 10
 
 tankMode 0
 tankModeTarget
@@ -282,7 +279,7 @@ teleportAuto_useItemForRespawn
 teleportAuto_item1
 teleportAuto_item2
 
-dealAuto 1
+dealAuto 2
 dealAuto_names
 partyAuto 1
 partyAutoShare 1
@@ -307,7 +304,7 @@ wx_map_monsterSticking 1
 wx_map_npcSticking 1
 wx_map_playersSticking 1
 wx_map_portalSticking 5
-wx_map_route
+wx_map_route 1
 wx_npcTalk
 wx_captcha
 showAllDamage 0
@@ -319,7 +316,6 @@ logPrivateChat 1
 logPartyChat 1
 logGuildChat 1
 logSystemChat 1
-logShop 1
 logEmoticons
 logConsole 1
 logAppendUsername 1
@@ -330,7 +326,7 @@ logDead 1
 chatTitleOversize 0
 shopTitleOversize 0
 
-sleepTime 10000
+sleepTime 100000
 
 ignoreAll 0
 itemHistory 0
@@ -440,6 +436,14 @@ pet_return 20
 ######## Block options ########
 # You can copy & paste any block multiple times. So if you want to
 # configure two attack skills, just duplicate the attackSkillSlot block.
+
+attackSkillSlot Steal {
+	sp > 9
+	maxUses 1
+	dist 1.5
+	target_dist < 1.5
+	maxAttempts 1
+}
 
 attackSkillSlot {
 	lvl 10
@@ -562,40 +566,6 @@ useSelf_skill_smartHeal 1
 
 partySkillDistance 0..8
 
-useSelf_skill Heal {
-	hp < 95%
-	sp > 128
-}
-
-useSelf_skill Blessing {
-	timeout 3
-	whenStatusInactive Blessing
-}
-
-useSelf_skill Increase AGI {
-	timeout 5
-	whenStatusInactive Increase AGI
-	notWhileSitting 1
-}
-
-useSelf_skill Summon Spirit Sphere {
-	spirit < 5
-}
-
-partySkill Blessing {
-	timeout 3
-	target_whenStatusInactive Blessing
-	notWhileSitting 1
-	target_timeout 240
-}
-
-partySkill Increase AGI {
-	timeout 5
-	target_whenStatusInactive Increase AGI
-	notWhileSitting 1
-	target_timeout 240
-}
-
 partySkill {
 	lvl 10
 	dist 3
@@ -701,58 +671,35 @@ equipAuto {
 	manualAI 0
 }
 
-useSelf_item {
-	hp
-	sp
-	homunculus_hp
-	homunculus_sp
-	homunculus_dead
-	onAction
-	whenStatusActive
-	whenStatusInactive
-	whenFollowing
-	spirit
-	amuletType
-	aggressives
-	monsters
-	notMonsters
-	monstersCount
-	stopWhenHit 0
-	inLockOnly 0
-	notWhileSitting 0
-	notInTown 0
-	timeout 0
-	disabled 0
-	inInventory
-	manualAI 0
-}
-
-useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Novice Potion {
-	hp < 70%
-}
-
 ######## Autostorage/autosell ########
 
-# Tool Dealer
-# payon 159 96
-# hu_in01 241 368
+buyAuto {
+	npc
+	standpoint
+	distance 5
+	price
+	minAmount 2
+	maxAmount 3
+	batchSize
+	disabled 0
+}
 
-# Kafra
-# payon 181 104 c r1 r0
-# hugel 88 168 c r1 r0
-
-sellAuto 0
-sellAuto_npc payon 159 96
+sellAuto 1
+# geffen_in 74 144
+# alberta_in 188 21
+sellAuto_npc morocc 147 102
 sellAuto_standpoint
-sellAuto_distance 5
+sellAuto_distance 6
 sellAuto_npc_steps s
 
-storageAuto 0
-storageAuto_npc payon 181 104
+storageAuto 1
+# geffen 120 62
+# alberta 113 60
+storageAuto_npc morocc 156 97
 storageAuto_standpoint
-storageAuto_distance 5
-storageAuto_npc_type 3
-storageAuto_npc_steps c r1 r0
+storageAuto_distance 6
+storageAuto_npc_type 1
+storageAuto_npc_steps
 storageAuto_password
 storageEncryptKey
 storageAuto_keepOpen 0
@@ -761,7 +708,7 @@ storageAuto_useItem 0
 storageAuto_useItem_item
 storageAuto_notAfterDeath
 relogAfterStorage 0
-minStorageZeny 500
+minStorageZeny 50
 
 npcTimeResponse
 npcWrongStepsMethod 0

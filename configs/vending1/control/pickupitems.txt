@@ -8,18 +8,6 @@
 #		 2 to take the item as fast as it can
 #
 #Use the item name "all" to tell kore to pickup or not pickup all items by default
-all 0
+all 1
 # jellopy 0
 # fluff 0
-Red Herb 1
-Carrot 1
-Apple 1
-Potato 1
-Milk 1
-Creamy Card 2
-Silk Robe [1] 2
-Coco Card 2
-Hood [1] 2
-Sandals [1] 2
-Red Blood 2
-Elder Willow Card 2

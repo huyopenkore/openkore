@@ -58,4 +58,4 @@
 # <attack> = 1
 
 all 0
-Creamy 1
+Coco 1
