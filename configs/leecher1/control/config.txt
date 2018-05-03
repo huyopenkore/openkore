@@ -191,9 +191,12 @@ itemsCheckWeight 1
 #lockMap hu_fild06
 #lockMap_x 200
 #lockMap_y 367
-lockMap cmd_fild06
-lockMap_x 366
-lockMap_y 360
+#lockMap cmd_fild06
+#lockMap_x 366
+#lockMap_y 360
+lockMap ein_fild08
+lockMap_x 358
+lockMap_y 130
 lockMap_randX
 lockMap_randY
 
@@ -221,7 +224,8 @@ runFromTarget_dist 6
 
 #saveMap payon
 #saveMap hugel
-saveMap morocc
+#saveMap morocc
+saveMap einbech
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
 memo1
