@@ -62,3 +62,4 @@ Yellow Plant 0
 White Plant 0
 Green Plant 0
 Shining Plant 0
+Red Mushroom 0

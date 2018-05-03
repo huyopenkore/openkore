@@ -187,7 +187,8 @@ itemsCheckWeight 1
 
 #lockMap pay_fild07
 #lockMap hu_fild06
-lockMap cmd_fild06
+#lockMap cmd_fild06
+lockMap ein_fild08
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -217,7 +218,7 @@ runFromTarget_dist 6
 
 #saveMap payon
 #saveMap hugel
-saveMap morocc
+saveMap einbech
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
 memo1
@@ -231,8 +232,8 @@ shop_useSkill 1
 
 sitAuto_hp_lower 40
 sitAuto_hp_upper 70
-sitAuto_sp_lower 0
-sitAuto_sp_upper 0
+sitAuto_sp_lower 30
+sitAuto_sp_upper 80
 sitAuto_follow 0
 sitAuto_over_50 0
 sitAuto_idle 1
@@ -241,12 +242,12 @@ sitAuto_look_from_wall
 sitTensionRelax 0
 
 statsAddAuto 1
-statsAddAuto_list 21 dex, 2 int, 31 agi, 8 int, 98 agi, 41 dex, 31 str
+statsAddAuto_list 21 dex, 2 int, 31 agi, 8 int, 98 agi, 41 dex, 31 str, 29 luk, 31 vit
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
 skillsAddAuto 1
-skillsAddAuto_list Divine Protection 5, Blessing 10, Heal 3, Increase Agi 10, Heal 6, Ruwach 1, Teleport 2, Divine Protection 10, Demon Bane 10, Iron Fists 2, Summon Spirit Sphere 5, Iron Fists 5, Flee 5, Raging Trifecta Blow 10, Root 2, Spiritual Cadence 5, Flee 10, Iron Fists 10
+skillsAddAuto_list Divine Protection 5, Blessing 10, Heal 3, Increase Agi 10, Heal 6, Ruwach 1, Teleport 2, Divine Protection 10, Demon Bane 10, Iron Fists 2, Summon Spirit Sphere 5, Iron Fists 5, Flee 5, Raging Trifecta Blow 10, Root 2, Spiritual Cadence 5, Flee 10, Iron Fists 10, Raging Quadruple Blow 5
 
 tankMode 0
 tankModeTarget
@@ -567,6 +568,15 @@ useSelf_skill Heal {
 	sp > 128
 }
 
+attackComboSlot Raging Quadruple Blow {
+	lvl 5
+	dist 1.5
+	sp > 128
+	afterSkill Raging Trifecta Blow
+	waitBeforeUse 0.3
+	isSelfSkill 1
+}
+
 useSelf_skill Blessing {
 	timeout 3
 	whenStatusInactive Blessing
@@ -594,6 +604,18 @@ partySkill Increase AGI {
 	target_whenStatusInactive Increase AGI
 	notWhileSitting 1
 	target_timeout 240
+}
+
+useSelf_item Awakening Potion {
+	whenStatusInactive Awakening Potion
+	inLockOnly 1
+	notWhileSitting 1
+	timeout 5
+}
+
+doCommand relog 5 {
+	whenStatusActive Divest Weapon
+	timeout 5
 }
 
 partySkill {
@@ -646,7 +668,7 @@ monsterSkill {
 	# Target Monster Conditions
 }
 
-autoSwitch_default_rightHand
+autoSwitch_default_rightHand Fist
 autoSwitch_default_leftHand
 autoSwitch_default_arrow
 
@@ -736,23 +758,36 @@ useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Novice Potion {
 # Tool Dealer
 # payon 159 96
 # hu_in01 241 368
+# moc_ruins 91 128
 
 # Kafra
 # payon 181 104 c r1 r0
 # hugel 88 168 c r1 r0
+# moc_ruins 59 157 c r0 r0
+
+buyAuto Awakening Potion {
+	npc ein_in01 189 15
+	standpoint
+	distance 5
+	price
+	minAmount 1
+	maxAmount 10
+	batchSize
+	disabled 0
+}
 
 sellAuto 1
-sellAuto_npc moc_ruins 91 128
+sellAuto_npc ein_in01 189 15
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s
 
 storageAuto 1
-storageAuto_npc moc_ruins 59 157
+storageAuto_npc einbech 181 132
 storageAuto_standpoint
 storageAuto_distance 5
 storageAuto_npc_type 3
-storageAuto_npc_steps c r0 r0
+storageAuto_npc_steps c r1 r0
 storageAuto_password
 storageEncryptKey
 storageAuto_keepOpen 0
@@ -771,6 +806,14 @@ getAuto {
 	maxAmount
 	passive
 	disabled 0
+}
+
+getAuto Awakening Potion {
+	minAmount 49
+	maxAmount 50
+	passive 1
+	disabled 0
+	dcOnEmpty 0
 }
 
 ######## Debugging options; only useful for developers ########

@@ -49,6 +49,7 @@ LV10 Blessing Scroll 1000 1 0
 LV10 Agil Scroll 1000 1 0
 Yellow Butterfly Wing 1000 1 0
 Old Battle Manual 1000 1 0
+Awakening Potion 20 1 0
 
 #########################
 ##### SELLING ITEMS #####

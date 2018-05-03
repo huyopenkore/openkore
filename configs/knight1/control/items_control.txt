@@ -55,6 +55,7 @@ LV10 Blessing Scroll 1000 1 0
 LV10 Agil Scroll 1000 1 0
 Yellow Butterfly Wing 1000 1 0
 Old Battle Manual 1000 1 0
+Awakening Potion 20 1 0
 
 602 10 1 0 # Butterfly Wing
 601 100 1 0 # Fly Wing
