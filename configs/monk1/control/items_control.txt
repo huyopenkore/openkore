@@ -64,6 +64,26 @@ Somber Novice Hood 0 0 1
 Novice Slippers 0 0 1
 Cotton Shirt 0 0 1
 Green Herb 0 0 1
+Stone 0 0 1
+Grasshopper's Leg 0 0 1
+Zargon 0 0 1
+Stone Heart 0 0 1
+Singing Plant 0 0 1
+Flexible Tube 0 0 1
+Jubilee 0 0 1
+Rusty Screw 0 0 1
+Iron 0 0 1
+Dew-Laden Moss 0 0 1
+Honey 0 0 1
+Level 3 Lightening Bolt 0 0 1
+Ice Cream 0 0 1
+Bitter Herb 0 0 1
+Aloe Leaflet 0 0 1
+Candy 0 0 1
+Candy Cane 0 0 1
+Trunk 0 0 1
+Garlet 0 0 1
+Yellow Gemstone 0 0 1
 
 ##### WORTHLESS GEARS #####
 # Worthless gears which are sold by default

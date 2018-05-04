@@ -242,7 +242,7 @@ sitAuto_look_from_wall
 sitTensionRelax 0
 
 statsAddAuto 1
-statsAddAuto_list 21 dex, 2 int, 31 agi, 8 int, 98 agi, 41 dex, 31 str, 29 luk, 31 vit
+statsAddAuto_list 21 dex, 2 int, 31 agi, 8 int, 98 agi, 41 dex, 31 str, 30 luk, 51 dex
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
@@ -575,6 +575,7 @@ attackComboSlot Raging Quadruple Blow {
 	afterSkill Raging Trifecta Blow
 	waitBeforeUse 0.3
 	isSelfSkill 1
+	disabled 1
 }
 
 useSelf_skill Blessing {
@@ -668,7 +669,7 @@ monsterSkill {
 	# Target Monster Conditions
 }
 
-autoSwitch_default_rightHand Fist
+autoSwitch_default_rightHand
 autoSwitch_default_leftHand
 autoSwitch_default_arrow
 
