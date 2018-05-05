@@ -117,3 +117,30 @@ macro equip {
 	pause 5
 	do eq Criatura Academy Hat [1]
 }
+
+automacro hpLow {
+	CurrentHP < 30%
+	run-once 1
+	call {
+		do p hp low
+		do p lol
+	}
+}
+
+automacro priestActive {
+	CurrentHP < 30%
+	PartyMsg /come here/
+	call {
+		do p coming $.PartyMsgLastName
+		do follow $.PartyMsgLastName
+	}
+}
+
+automacro hpHigh {
+	CurrentHP >= 99%
+	timeout 20
+	call {
+		do follow stop
+		release hpLow
+	}
+}
