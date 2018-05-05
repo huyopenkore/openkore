@@ -123,24 +123,32 @@ automacro hpLow {
 	run-once 1
 	call {
 		do p hp low
-		do p lol
+		do p $.CurrentHPLastPercent
 	}
 }
 
 automacro priestActive {
-	CurrentHP < 30%
+	CurrentHP < 40%
 	PartyMsg /come here/
 	call {
 		do p coming $.PartyMsgLastName
 		do follow $.PartyMsgLastName
+		do stand
 	}
 }
 
 automacro hpHigh {
+	CurrentHP >= 30%
+	timeout 20
+	call {
+		release hpLow
+	}
+}
+
+automacro hpFull {
 	CurrentHP >= 99%
 	timeout 20
 	call {
 		do follow stop
-		release hpLow
 	}
 }
