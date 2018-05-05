@@ -21,14 +21,16 @@
 # Andre Card	200,000		5
 # Coconut	1,000..2,000	2
 
-CHEAPEST
-Poo Poo Hat	70,000
-Foxtail Replica [3]	200,000
-Marvelous Foxtail Staff [3]	300,000
-Pike [4]	88,000
-Burning Passion Guitar	89,000
-Steel	8,000
-Golem Card	700,000	2
-Shell Fish Card	180,000	2
-Willow Card	80,000	2
-Crab Card	200,000	2
+CHEAPEST Revolver
+Crimson Revolver [2]	900,000
+Crimson Revolver [2]	900,000
+Crimson Revolver [2]	900,000
+Crimson Revolver [2]	900,000
+Crimson Revolver [2]	900,000
+Crimson Revolver [2]	900,000
+Crimson Revolver [2]	900,000
+Crimson Revolver [2]	900,000
+Crimson Revolver [2]	900,000
+Crimson Revolver [2]	900,000
+Crimson Revolver [2]	900,000
+Crimson Revolver [2]	900,000

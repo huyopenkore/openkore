@@ -58,5 +58,4 @@
 # <attack> = 1
 
 all 0
-Coco 1
-Elder Willow 1
+Condor 1
