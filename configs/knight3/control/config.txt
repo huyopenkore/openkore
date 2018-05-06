@@ -614,7 +614,7 @@ monsterSkill {
 	# Target Monster Conditions
 }
 
-autoSwitch_default_rightHand Claymore
+autoSwitch_default_rightHand +5 Claymore
 autoSwitch_default_leftHand
 autoSwitch_default_arrow
 
