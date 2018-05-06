@@ -187,7 +187,7 @@ itemsCheckWeight 1
 
 #lockMap pay_fild07
 #lockMap hu_fild06
-lockMap moc_fild12
+lockMap iz_dun01
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -727,11 +727,11 @@ useSelf_item {
 	manualAI 0
 }
 
-useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Meat, Orange, Novice Potion {
+useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Meat, Monster's Feed, Orange, Novice Potion {
 	hp < 70%
 }
 
-useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Meat, Orange {
+useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Meat, Monster's Feed, Orange {
 	weight > 47%
 }
 

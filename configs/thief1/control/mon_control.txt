@@ -58,4 +58,5 @@
 # <attack> = 1
 
 all 0
-Condor 1
+Kukre 1
+Hydra 1

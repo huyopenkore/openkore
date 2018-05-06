@@ -16,6 +16,8 @@ Carrot 1
 Apple 1
 Potato 1
 Milk 1
+Meat 1
+Monster's Feed 1
 Creamy Card 2
 Silk Robe [1] 2
 Coco Card 2
@@ -24,3 +26,6 @@ Sandals [1] 2
 Red Blood 2
 Elder Willow Card 2
 Condor Card 2
+Hydra Card 2
+Kukre Card 2
+Crystal Blue 2
