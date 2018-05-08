@@ -3,12 +3,12 @@
 
 ######## Login options and server-specific options ########
 
-master International - iRO: Ymir/Yggdrasil/Valkyrie
-server 1
+master
+server
 username
 password
 loginPinCode
-char 0
+char
 
 # Poseidon Settings (http://wiki.openkore.com/index.php/PoseidonServer)
 # They must be the same as Query Server config in Poseidon.txt
@@ -36,7 +36,7 @@ XKore_ID
 
 # It is not advised to set secureAdminPassword if you're using Xkore 2
 secureAdminPassword 1
-adminPassword stoutwai
+adminPassword kiewabok
 callSign
 commandPrefix ;
 callSignGM 0
@@ -59,7 +59,7 @@ alias_heal sp 28
 allowedMaps
 allowedMaps_reaction 1
 
-attackAuto -1
+attackAuto 2
 attackAuto_party 1
 attackAuto_onlyWhenSafe 0
 attackAuto_followTarget 1
@@ -185,33 +185,23 @@ itemsTakeAuto_new 0
 itemsTakeGreed 0
 itemsCheckWeight 1
 
-lockMap pay_fild01
-lockMap_x 334
-lockMap_y 356
 #lockMap pay_fild07
-#lockMap_x 23
-#lockMap_y 207
 #lockMap hu_fild06
-#lockMap_x 200
-#lockMap_y 367
 #lockMap cmd_fild06
-#lockMap_x 366
-#lockMap_y 360
-#lockMap ein_fild08
-#lockMap_x 358
-#lockMap_y 130
-#lockMap ein_fild09
-#lockMap_x 75
-#lockMap_y 350
+lockMap pay_fild01
+lockMap_x
+lockMap_y
+lockMap_randX
+lockMap_randY
 
 route_escape_reachedNoPortal 1
 route_escape_randomWalk 1
 route_escape_shout
 route_avoidWalls 1
-route_randomWalk 0
+route_randomWalk 1
 route_randomWalk_inTown 0
 route_randomWalk_maxRouteTime 75
-route_maxWarpFee
+route_maxWarpFee 0
 route_maxNpcTries 5
 route_teleport 0
 route_teleport_minDistance 150
@@ -228,7 +218,6 @@ runFromTarget_dist 6
 
 #saveMap payon
 #saveMap hugel
-#saveMap morocc
 saveMap einbech
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
@@ -243,8 +232,8 @@ shop_useSkill 1
 
 sitAuto_hp_lower 40
 sitAuto_hp_upper 70
-sitAuto_sp_lower 0
-sitAuto_sp_upper 0
+sitAuto_sp_lower 30
+sitAuto_sp_upper 80
 sitAuto_follow 0
 sitAuto_over_50 0
 sitAuto_idle 1
@@ -253,12 +242,12 @@ sitAuto_look_from_wall
 sitTensionRelax 0
 
 statsAddAuto 1
-statsAddAuto_list
+statsAddAuto_list 22 dex, 63 agi, 50 dex, 80 agi, 59 dex, 87 agi, 71 dex
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
 skillsAddAuto 1
-skillsAddAuto_list
+skillsAddAuto_list Double Attack 10, Improve Dodge 10
 
 tankMode 0
 tankModeTarget
@@ -574,6 +563,62 @@ useSelf_skill_smartHeal 1
 
 partySkillDistance 0..8
 
+useSelf_skill Heal {
+	hp < 95%
+	sp > 128
+}
+
+attackComboSlot Raging Quadruple Blow {
+	lvl 5
+	dist 1.5
+	sp > 128
+	afterSkill Raging Trifecta Blow
+	waitBeforeUse 0.3
+	isSelfSkill 1
+	disabled 1
+}
+
+useSelf_skill Blessing {
+	timeout 3
+	whenStatusInactive Blessing
+}
+
+useSelf_skill Increase AGI {
+	timeout 5
+	whenStatusInactive Increase AGI
+	notWhileSitting 1
+}
+
+useSelf_skill Summon Spirit Sphere {
+	spirit < 5
+}
+
+partySkill Blessing {
+	timeout 3
+	target_whenStatusInactive Blessing
+	notWhileSitting 1
+	target_timeout 240
+}
+
+partySkill Increase AGI {
+	timeout 5
+	target_whenStatusInactive Increase AGI
+	notWhileSitting 1
+	target_timeout 240
+}
+
+useSelf_item Awakening Potion {
+	whenStatusInactive Awakening Potion
+	inLockOnly 1
+	notWhileSitting 1
+	timeout 5
+}
+
+doCommand relog 5 {
+	whenStatusActive Divest Weapon
+	timeout 5
+}
+
 partySkill {
 	lvl 10
 	dist 3
@@ -624,7 +669,7 @@ monsterSkill {
 	# Target Monster Conditions
 }
 
-autoSwitch_default_rightHand
+autoSwitch_default_rightHand +5 Fist [Fire]
 autoSwitch_default_leftHand
 autoSwitch_default_arrow
 
@@ -711,24 +756,34 @@ useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Novice Potion {
 
 ######## Autostorage/autosell ########
 
-buyAuto Butterfly Wing {
-	npc payon 159 96
+# Tool Dealer
+# payon 159 96
+# hu_in01 241 368
+# moc_ruins 91 128
+
+# Kafra
+# payon 181 104 c r1 r0
+# hugel 88 168 c r1 r0
+# moc_ruins 59 157 c r0 r0
+
+buyAuto Awakening Potion {
+	npc ein_in01 189 15
 	standpoint
 	distance 5
 	price
 	minAmount 1
-	maxAmount 3
+	maxAmount 10
 	batchSize
 	disabled 1
 }
 
-sellAuto 0
+sellAuto 1
 sellAuto_npc payon 159 96
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s
 
-storageAuto 0
+storageAuto 1
 storageAuto_npc payon 181 104
 storageAuto_standpoint
 storageAuto_distance 5
@@ -752,6 +807,14 @@ getAuto {
 	maxAmount
 	passive
 	disabled 0
+}
+
+getAuto Awakening Potion {
+	minAmount 49
+	maxAmount 50
+	passive 1
+	disabled 0
+	dcOnEmpty 0
 }
 
 ######## Debugging options; only useful for developers ########

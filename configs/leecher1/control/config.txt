@@ -185,6 +185,9 @@ itemsTakeAuto_new 0
 itemsTakeGreed 0
 itemsCheckWeight 1
 
+lockMap pay_fild01
+lockMap_x 333
+lockMap_y 356
 #lockMap pay_fild07
 #lockMap_x 23
 #lockMap_y 207
@@ -197,9 +200,9 @@ itemsCheckWeight 1
 #lockMap ein_fild08
 #lockMap_x 358
 #lockMap_y 130
-lockMap ein_fild09
-lockMap_x 74
-lockMap_y 350
+#lockMap ein_fild09
+#lockMap_x 74
+#lockMap_y 350
 lockMap_randX
 lockMap_randY
 
