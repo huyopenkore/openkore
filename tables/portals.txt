@@ -3205,3 +3205,4 @@ rockrdg1 33 246 harboro1 362 206
 rockrdg1 371 206 rockrdg2 31 207
 rockrdg2 27 207 rockrdg1 371 206
 izlude_a 20 98 prt_fild08a 371 212
+moc_para01 48 39 moc_para01 106 14
