@@ -56,6 +56,8 @@ LV10 Agil Scroll 1000 1 0
 Yellow Butterfly Wing 1000 1 0
 Old Battle Manual 1000 1 0
 Awakening Potion 20 1 0
+Jamadhar 1 1 0
+Eden Dagger I 1 1 0
 
 602 10 1 0 # Butterfly Wing
 601 100 1 0 # Fly Wing
@@ -67,7 +69,7 @@ Awakening Potion 20 1 0
 506 0 1 0 # Green Potion
 501 25 1 0 # Red Potion
 502 25 1 0 # Orange Potion
-504 25 1 0  # White Potion
+504 50 1 0  # White Potion
 503 25 1 0 # Yellow potion
 
 #########################

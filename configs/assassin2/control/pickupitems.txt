@@ -13,3 +13,6 @@ all 1
 # fluff 0
 Green Herb 0
 Iron Ore 0
+Iron 0
+Steel 0
+Rough Elunium 0

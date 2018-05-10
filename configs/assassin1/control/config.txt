@@ -185,9 +185,9 @@ itemsTakeAuto_new 0
 itemsTakeGreed 0
 itemsCheckWeight 1
 
-lockMap pay_fild07
+#lockMap pay_fild07
 #lockMap hu_fild06
-#lockMap cmd_fild06
+lockMap cmd_fild06
 #lockMap pay_fild01
 lockMap_x
 lockMap_y
@@ -218,7 +218,7 @@ runFromTarget_dist 6
 
 #saveMap payon
 #saveMap hugel
-saveMap einbech
+saveMap morocc
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
 memo1
@@ -242,12 +242,12 @@ sitAuto_look_from_wall
 sitTensionRelax 0
 
 statsAddAuto 1
-statsAddAuto_list 22 dex, 63 agi, 50 dex, 80 agi, 59 dex, 87 agi, 71 dex
+statsAddAuto_list 22 dex, 63 agi, 41 dex, 12 luk, 46 dex, 80 agi, 55 dex, 87 agi, 67 dex
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
 skillsAddAuto 1
-skillsAddAuto_list Double Attack 10, Improve Dodge 10
+skillsAddAuto_list Double Attack 10, Improve Dodge 10, Enchant Poison 10, Katar Mastery 10, Righthand Mastery 5, Lefthand Mastery 5
 
 tankMode 0
 tankModeTarget
@@ -614,6 +614,13 @@ useSelf_item Awakening Potion {
 	timeout 5
 }
 
+useSelf_skill Enchant Poison {
+	whenStatusInactive Enchant Poison
+	inLockOnly 1
+	notWhileSitting 1
+	notInTown 1
+}
+
 doCommand relog 5 {
 	whenStatusActive Divest Weapon
 	timeout 5
@@ -750,7 +757,7 @@ useSelf_item {
 	manualAI 0
 }
 
-useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Novice Potion {
+useSelf_item Red Herb, Carrot, Apple, Potato, Milk, White Potion, Novice Potion {
 	hp < 70%
 }
 
@@ -766,29 +773,51 @@ useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Novice Potion {
 # hugel 88 168 c r1 r0
 # moc_ruins 59 157 c r0 r0
 
+buyAuto White Potion {
+	npc moc_ruins 91 128
+	standpoint
+	distance 5
+	price
+	minAmount 0
+	maxAmount 50
+	batchSize
+	disabled 0
+}
+
+buyAuto Butterfly Wing {
+	npc moc_ruins 91 128
+	standpoint
+	distance 5
+	price
+	minAmount 1
+	maxAmount 3
+	batchSize
+	disabled 0
+}
+
 buyAuto Awakening Potion {
-	npc ein_in01 189 15
+	npc moc_ruins 91 128
 	standpoint
 	distance 5
 	price
 	minAmount 1
 	maxAmount 10
 	batchSize
-	disabled 1
+	disabled 0
 }
 
 sellAuto 1
-sellAuto_npc payon 159 96
+sellAuto_npc moc_ruins 91 128
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s
 
 storageAuto 1
-storageAuto_npc payon 181 104
+storageAuto_npc moc_ruins 59 157
 storageAuto_standpoint
 storageAuto_distance 5
 storageAuto_npc_type 3
-storageAuto_npc_steps c r1 r0
+storageAuto_npc_steps c r0 r0
 storageAuto_password
 storageEncryptKey
 storageAuto_keepOpen 0
