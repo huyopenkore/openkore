@@ -233,8 +233,8 @@ shop_useSkill 1
 
 sitAuto_hp_lower 40
 sitAuto_hp_upper 70
-sitAuto_sp_lower 30
-sitAuto_sp_upper 80
+sitAuto_sp_lower 0
+sitAuto_sp_upper 0
 sitAuto_follow 0
 sitAuto_over_50 0
 sitAuto_idle 1
