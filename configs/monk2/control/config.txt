@@ -187,8 +187,9 @@ itemsCheckWeight 1
 
 #lockMap pay_fild07
 #lockMap hu_fild06
-lockMap cmd_fild06
+#lockMap cmd_fild06
 #lockMap pay_fild01
+lockMap ein_fild08
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -218,7 +219,8 @@ runFromTarget_dist 6
 
 #saveMap payon
 #saveMap hugel
-saveMap morocc
+#saveMap morocc
+saveMap einbech
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
 memo1
@@ -648,7 +650,7 @@ monsterSkill {
 	# Target Monster Conditions
 }
 
-autoSwitch_default_rightHand +5 Fist [Fire]
+autoSwitch_default_rightHand Eden Group Mace3
 autoSwitch_default_leftHand
 autoSwitch_default_arrow
 
@@ -753,7 +755,7 @@ useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Novice Potion {
 # moc_ruins 59 157 c r0 r0
 
 buyAuto Awakening Potion {
-	npc moc_ruins 91 128
+	npc ein_in01 189 15
 	standpoint
 	distance 5
 	price
@@ -764,17 +766,17 @@ buyAuto Awakening Potion {
 }
 
 sellAuto 1
-sellAuto_npc moc_ruins 91 128
+sellAuto_npc ein_in01 189 15
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s
 
 storageAuto 1
-storageAuto_npc moc_ruins 59 157
+storageAuto_npc einbech 181 132
 storageAuto_standpoint
 storageAuto_distance 5
 storageAuto_npc_type 3
-storageAuto_npc_steps c r0 r0
+storageAuto_npc_steps c r1 r0
 storageAuto_password
 storageEncryptKey
 storageAuto_keepOpen 0
