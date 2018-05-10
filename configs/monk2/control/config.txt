@@ -201,7 +201,7 @@ route_avoidWalls 1
 route_randomWalk 1
 route_randomWalk_inTown 0
 route_randomWalk_maxRouteTime 75
-route_maxWarpFee 0
+route_maxWarpFee 100000
 route_maxNpcTries 5
 route_teleport 0
 route_teleport_minDistance 150
@@ -241,7 +241,7 @@ sitAuto_look
 sitAuto_look_from_wall
 sitTensionRelax 0
 
-statsAddAuto 1
+statsAddAuto 0
 statsAddAuto_list 12 dex, 70 agi, 40 dex, 99 agi
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1

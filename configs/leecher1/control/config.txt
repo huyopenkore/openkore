@@ -213,7 +213,7 @@ route_avoidWalls 1
 route_randomWalk 0
 route_randomWalk_inTown 0
 route_randomWalk_maxRouteTime 75
-route_maxWarpFee
+route_maxWarpFee 100000
 route_maxNpcTries 5
 route_teleport 0
 route_teleport_minDistance 150

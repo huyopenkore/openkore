@@ -201,7 +201,7 @@ route_avoidWalls 1
 route_randomWalk 1
 route_randomWalk_inTown 0
 route_randomWalk_maxRouteTime 75
-route_maxWarpFee 0
+route_maxWarpFee 100000
 route_maxNpcTries 5
 route_teleport 0
 route_teleport_minDistance 150
@@ -669,7 +669,7 @@ monsterSkill {
 	# Target Monster Conditions
 }
 
-autoSwitch_default_rightHand +5 Fist [Fire]
+autoSwitch_default_rightHand Stunner
 autoSwitch_default_leftHand
 autoSwitch_default_arrow
 
@@ -677,12 +677,8 @@ autoSwitch_default_arrow
 #       duplicate the weapon name for 'rightHand'
 # To attack with bare hands, specify "[NONE]" (without the quotes) for rightHand
 
-autoSwitch {
-	rightHand
-	leftHand
-	arrow
-	distance
-	useWeapon
+autoSwitch Wootan Shooter, Dryad {
+	rightHand +5 Fist [Fire]
 }
 
 equipAuto {

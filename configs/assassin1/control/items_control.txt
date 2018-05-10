@@ -138,7 +138,6 @@ Cotton Shirt [1] 0 0 1
 2228 0 0 1 # Helm
 2409 0 0 1 # High Heels
 2501 0 0 1 # Hood
-2502 0 0 1 # Hood [1]
 2303 0 0 1 # Jacket
 2304 0 0 1 # Jacket [1]
 2505 0 0 1 # Manteau

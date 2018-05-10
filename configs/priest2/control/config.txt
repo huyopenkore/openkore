@@ -201,7 +201,7 @@ route_avoidWalls 1
 route_randomWalk 1
 route_randomWalk_inTown 0
 route_randomWalk_maxRouteTime 75
-route_maxWarpFee 0
+route_maxWarpFee 100000
 route_maxNpcTries 5
 route_teleport 0
 route_teleport_minDistance 150
@@ -241,13 +241,13 @@ sitAuto_look
 sitAuto_look_from_wall
 sitTensionRelax 0
 
-statsAddAuto 1
+statsAddAuto 0
 statsAddAuto_list 12 dex, 70 agi, 30 dex
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
 skillsAddAuto 1
-skillsAddAuto_list Divine Protection 5, Blessing 10, Heal 3, Increase Agi 10
+skillsAddAuto_list Divine Protection 5, Blessing 10, Heal 3, Increase Agi 10, Kyrie Eleison 4, Magnificat 3, Gloria 5, Impositio Manus 5, Mace Mastery 10
 
 tankMode 0
 tankModeTarget
@@ -565,17 +565,8 @@ partySkillDistance 0..8
 
 useSelf_skill Heal {
 	hp < 95%
-	sp > 128
-}
-
-attackComboSlot Raging Quadruple Blow {
-	lvl 5
-	dist 1.5
-	sp > 128
-	afterSkill Raging Trifecta Blow
-	waitBeforeUse 0.3
-	isSelfSkill 1
-	disabled 1
+	sp > 208
+	notOnAction attack
 }
 
 useSelf_skill Blessing {
@@ -584,13 +575,34 @@ useSelf_skill Blessing {
 }
 
 useSelf_skill Increase AGI {
-	timeout 5
+	timeout 3
 	whenStatusInactive Increase AGI
 	notWhileSitting 1
 }
 
-useSelf_skill Summon Spirit Sphere {
-	spirit < 5
+useSelf_skill Magnificat {
+	timeout 3
+	whenStatusInactive Magnificat
+	notOnAction attack
+}
+
+useSelf_skill Kyrie Eleison {
+	timeout 3
+	whenStatusInactive Kyrie Eleison
+	notWhileSitting 1
+	notOnAction attack
+}
+
+useSelf_skill Gloria {
+	timeout 3
+	whenStatusInactive Gloria
+	notWhileSitting 1
+}
+
+useSelf_skill Impositio Manus {
+	timeout 3
+	whenStatusInactive Impositio Manus
+	notWhileSitting 1
 }
 
 doCommand relog 5 {
