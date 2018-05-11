@@ -189,7 +189,7 @@ itemsCheckWeight 1
 #lockMap hu_fild06
 #lockMap cmd_fild06
 #lockMap pay_fild01
-lockMap ein_fild08
+lockMap mjolnir_09
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -233,8 +233,8 @@ shop_useSkill 1
 
 sitAuto_hp_lower 40
 sitAuto_hp_upper 70
-sitAuto_sp_lower 30
-sitAuto_sp_upper 80
+sitAuto_sp_lower 0
+sitAuto_sp_upper 0
 sitAuto_follow 0
 sitAuto_over_50 0
 sitAuto_idle 1
@@ -242,7 +242,7 @@ sitAuto_look
 sitAuto_look_from_wall
 sitTensionRelax 0
 
-statsAddAuto 0
+statsAddAuto 1
 statsAddAuto_list 22 dex, 63 agi, 41 dex, 12 luk, 46 dex, 80 agi, 55 dex, 87 agi, 67 dex
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
@@ -783,7 +783,7 @@ buyAuto White Potion {
 	minAmount 0
 	maxAmount 50
 	batchSize
-	disabled 0
+	disabled 1
 }
 
 buyAuto Butterfly Wing {
@@ -794,7 +794,7 @@ buyAuto Butterfly Wing {
 	minAmount 1
 	maxAmount 3
 	batchSize
-	disabled 0
+	disabled 1
 }
 
 buyAuto Awakening Potion {
@@ -805,16 +805,16 @@ buyAuto Awakening Potion {
 	minAmount 1
 	maxAmount 10
 	batchSize
-	disabled 0
+	disabled 1
 }
 
-sellAuto 1
+sellAuto 0
 sellAuto_npc ein_in01 189 15
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s
 
-storageAuto 1
+storageAuto 0
 storageAuto_npc einbech 181 132
 storageAuto_standpoint
 storageAuto_distance 5

@@ -348,7 +348,7 @@ iz_ac01 100 24 izlude 127 253
 # Eden Teleport Officer
 iz_ac01 106 36 moc_para01 31 14 0 c r0 c
 # Garden
-iz_ac01 45 80 new_1-3 95 171 0 c r0 c
+#iz_ac01 45 80 new_1-3 95 171 0 c r0 c
 new_1-3 96 176 iz_ac01 49 73
 # Second floor
 iz_ac01 78 25 iz_ac02 104 27
@@ -3190,3 +3190,8 @@ rockrdg1 371 206 rockrdg2 31 207
 rockrdg2 27 207 rockrdg1 371 206
 izlude_a 20 98 prt_fild08a 371 212
 moc_para01 48 39 moc_para01 106 14
+iz_ac01_a 100 24 izlude_a 125 257
+izlude_a 125 257 iz_ac01_a 99 29
+iz_ac02_a 113 27 iz_ac01_a 78 25
+iz_ac01_a 78 25 iz_ac02_a 104 27
+iz_ac02_a 94 27 iz_ac01_a 78 28

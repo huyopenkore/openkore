@@ -78,6 +78,7 @@ automacro isJob10 {
 	JobID 0
 	JobLevel = 10
 	run-once 1
+	InInventory "Stone" < 1
 	call chat2
 }
 
@@ -93,7 +94,85 @@ macro chat2 {
 	do skills add 1
 	do skills add 1
 	do skills add 1
-	do move 348 215
+	do move 371 212
 	pause 5
-	do talknpc 343 216 c r0 n
+	do move 96 125
+	pause 5
+	do talknpc 96 125 r0 r0 r2
+	pause 5
+	do talknpc 96 125 r1
+	pause 5
+	do talknpc 96 125 c
+	pause 5
+	do eq Cotton Shirt [1]
+	do talknpc 96 125 r0
+	pause 5
+	do talknpc 108 139 r1 r0 r0 r0
+	pause 5
+	do eq Cotton Shirt [HP+100:SP+50] [1]
+	pause 5
+	do move 125 257
+	pause 5
+	do move 78 25
+	pause 5
+	do move 52 136
+	pause 5
+	do talknpc 52 136 r0 r0
+	pause 5
+	do talknpc 49 134 r0 r1
+	pause 5
+	do talknpc 55 134 r0 r0 r4
+	pause 5
+	do talknpc 52 136 c
+	pause 5
+	do eq Thief Manual
+	do talknpc 49 134 c
+	pause 5
+	do talknpc 49 134 r0
+	pause 5
+	do skills
+	do ml
+}
+
+automacro stoneStole {
+	JobID 0
+	JobLevel = 10
+	run-once 1
+	InInventory "Stone" > 0
+	call chat3
+}
+
+macro chat3 {
+	pause 5
+	do talknpc 49 134 c
+	pause 5
+	do talknpc 55 134 r0
+	pause 5
+	do skills
+	do ml
+}
+
+macro chat4 {
+	do talknpc 55 134 c
+	pause 5
+	do talknpc 52 136 c
+	pause 5
+	do talknpc 52 136 r0 r0
+	pause 5
+	do eq Criatura Academy Hat [1]
+	do eq Cotton Shirt [HP+100:SP+50] [1]
+	do eq Novice Main Gauche [3]
+	pause 5
+	do move 101 176
+	pause 5
+	do talknpc 101 176 r2 r1 r2
+	pause 5
+	do move prontera 152 326
+	pause 5
+	do talknpc 152 326 r0
+	pause 5
+	do conf lockMap mjolnir_09
+	do conf attackAuto 2
+	do conf route_randomWalk 1
+	do ai off
 }
