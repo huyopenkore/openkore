@@ -12,6 +12,8 @@ macro setup {
 	do conf lockMap 0
 	do conf skillsAddAuto 1
 	do conf relogAfterStorage 0
+	do conf sellAuto 0
+	do conf storageAuto 0
 	call chat1
 }
 
@@ -165,14 +167,68 @@ macro chat4 {
 	pause 5
 	do move 101 176
 	pause 5
-	do talknpc 101 176 r2 r1 r2
+	do talknpc 101 176 r2 r1 r2 r1
 	pause 5
-	do move prontera 152 326
+	do move prt_fild05 290 224
 	pause 5
-	do talknpc 152 326 r0
+	do talknpc 290 224 r0
 	pause 5
+	do conf saveMap prt_fild05
 	do conf lockMap mjolnir_09
 	do conf attackAuto 2
 	do conf route_randomWalk 1
+	do conf sellAuto 1
+	do conf sellAuto_npc prt_fild05 290 221
+	do conf storageAuto 1
+	do conf storageAuto_npc prt_fild05 290 224
+	do conf storageAuto_npc_steps c r1 r0
 	do ai off
+}
+
+macro eden {
+	do ai manual
+	do move moc_para01 22 30
+	pause 5
+	do talknpc 27 35 c r1 c r0 t="abc" t="abc" r3
+	pause 5
+	do talknpc 25 35 r1 r0 r0
+	pause 5
+	do move 30 10
+	pause 5
+	do move pay_arche 41 136
+	pause 5
+	do talknpc 41 136 c
+	do quest list
+}
+
+macro edendone {
+	do ai manual
+	do move moc_para01 22 30
+	pause 5
+	do talknpc 25 35 c
+	pause 5
+	do move moc_para01 112 95
+	pause 5
+	do talknpc 112 96 r0 r1
+	pause 5
+	do eq Eden Dagger I
+	do eq Eden Group Boots II
+	do eq Eden Group Uniform II
+	do eq Eden Group Hat
+	do eq Eden Group Manteau
+	do move 30 10
+}
+
+macro geffen {
+	do ai manual
+	do move geffen 125 61
+	pause 5
+	do talknpc 120 62 r0
+	do conf saveMap geffen
+	do conf lockMap mjolnir_01
+	do conf sellAuto_npc geffen_in 77 167
+	do conf storageAuto_npc geffen 120 62
+	do conf storageAuto_npc_steps c r1 r0
+	do ai on
+	do autostorage
 }

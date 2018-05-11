@@ -189,7 +189,7 @@ itemsCheckWeight 1
 #lockMap hu_fild06
 #lockMap cmd_fild06
 #lockMap pay_fild01
-lockMap ein_fild08
+lockMap mjolnir_01
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -220,7 +220,7 @@ runFromTarget_dist 6
 #saveMap payon
 #saveMap hugel
 #saveMap morocc
-saveMap einbech
+saveMap geffen
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
 memo1
@@ -243,7 +243,7 @@ sitAuto_look
 sitAuto_look_from_wall
 sitTensionRelax 0
 
-statsAddAuto 0
+statsAddAuto 1
 statsAddAuto_list 12 dex, 70 agi, 30 dex
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
@@ -567,7 +567,7 @@ partySkillDistance 0..8
 
 useSelf_skill Heal {
 	hp < 95%
-	sp > 208
+	sp > 128
 	notOnAction attack
 }
 
@@ -750,9 +750,14 @@ useSelf_item Concentration Potion {
 	timeout 5
 }
 
-useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Novice Potion {
+useSelf_item Red Herb, Meat, Carrot, Apple, Potato, Milk, White Potion, Novice Potion {
 	hp < 70%
 }
+
+useSelf_item Red Herb, Meat, Carrot, Apple, Potato, Milk, White Potion {
+	weight > 47%
+}
+
 
 ######## Autostorage/autosell ########
 
@@ -760,6 +765,7 @@ useSelf_item Red Herb, Carrot, Apple, Potato, Milk, Novice Potion {
 # payon 159 96
 # hu_in01 241 368
 # moc_ruins 91 128
+# ein_in01 189 15
 
 # Kafra
 # payon 181 104 c r1 r0
@@ -774,17 +780,17 @@ buyAuto Concentration Potion {
 	minAmount 1
 	maxAmount 10
 	batchSize
-	disabled 0
+	disabled 1
 }
 
 sellAuto 1
-sellAuto_npc ein_in01 189 15
+sellAuto_npc geffen_in 77 167
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s
 
-storageAuto 1
-storageAuto_npc einbech 181 132
+storageAuto 0
+storageAuto_npc geffen 120 62
 storageAuto_standpoint
 storageAuto_distance 5
 storageAuto_npc_type 3
