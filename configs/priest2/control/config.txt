@@ -189,7 +189,7 @@ itemsCheckWeight 1
 #lockMap hu_fild06
 #lockMap cmd_fild06
 #lockMap pay_fild01
-lockMap mjolnir_01
+lockMap moc_fild17
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -220,7 +220,7 @@ runFromTarget_dist 6
 #saveMap payon
 #saveMap hugel
 #saveMap morocc
-saveMap geffen
+saveMap morocc
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
 memo1
@@ -244,7 +244,7 @@ sitAuto_look_from_wall
 sitTensionRelax 0
 
 statsAddAuto 1
-statsAddAuto_list 12 dex, 70 agi, 30 dex
+statsAddAuto_list 12 dex, 81 agi, 19 dex, 91 agi, 45 dex, 99 agi, 48 dex
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
@@ -567,7 +567,13 @@ partySkillDistance 0..8
 
 useSelf_skill Heal {
 	hp < 95%
-	sp > 128
+	sp > 208
+	notOnAction attack
+}
+
+partySkill Heal {
+	target_hp < 100%
+	sp > 208
 	notOnAction attack
 }
 
@@ -585,6 +591,7 @@ useSelf_skill Increase AGI {
 useSelf_skill Magnificat {
 	timeout 3
 	whenStatusInactive Magnificat
+	sp < 100%
 	notOnAction attack
 }
 
@@ -592,19 +599,40 @@ useSelf_skill Kyrie Eleison {
 	timeout 3
 	whenStatusInactive Kyrie Eleison
 	notWhileSitting 1
+	notInTown 1
 	notOnAction attack
+	disabled 1
 }
 
 useSelf_skill Gloria {
 	timeout 3
 	whenStatusInactive Gloria
 	notWhileSitting 1
+	notInTown 1
+	disabled 0
 }
 
 useSelf_skill Impositio Manus {
 	timeout 3
 	whenStatusInactive Impositio Manus
 	notWhileSitting 1
+	notInTown 1
+}
+
+partySkill Blessing {
+	timeout 3
+	target_whenStatusInactive Blessing
+	notWhileSitting 1
+	sp > 128
+	target_timeout 240
+}
+
+partySkill Increase AGI {
+	timeout 5
+	target_whenStatusInactive Increase AGI
+	notWhileSitting 1
+	sp > 128
+	target_timeout 240
 }
 
 doCommand relog 5 {
@@ -773,28 +801,28 @@ useSelf_item Red Herb, Meat, Carrot, Apple, Potato, Milk, White Potion {
 # moc_ruins 59 157 c r0 r0
 
 buyAuto Concentration Potion {
-	npc ein_in01 189 15
+	npc moc_ruins 91 128
 	standpoint
 	distance 5
 	price
-	minAmount 1
+	minAmount 0
 	maxAmount 10
 	batchSize
-	disabled 1
+	disabled 0
 }
 
 sellAuto 1
-sellAuto_npc geffen_in 77 167
+sellAuto_npc moc_ruins 91 128
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s
 
 storageAuto 0
-storageAuto_npc geffen 120 62
+storageAuto_npc moc_ruins 59 157
 storageAuto_standpoint
 storageAuto_distance 5
 storageAuto_npc_type 3
-storageAuto_npc_steps c r1 r0
+storageAuto_npc_steps c r0 r0
 storageAuto_password
 storageEncryptKey
 storageAuto_keepOpen 0

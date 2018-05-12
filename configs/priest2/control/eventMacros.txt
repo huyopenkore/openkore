@@ -181,3 +181,56 @@ macro geffen {
 	do ai on
 	do autostorage
 }
+
+macro eden50 {
+	do ai manual
+	do move moc_para01 22 30
+	pause 5
+	do talknpc 25 35 r0
+	pause 5
+	do move 30 10
+	pause 5
+	do move in_orcs01 38 171
+	pause 5
+	do talknpc 38 175 c
+	pause 5
+	do quest list
+}
+
+macro morocc {
+	do ai manual
+	do move morocc 160 258
+	pause 5
+	do talknpc 160 258 r0
+	do conf saveMap morocc
+	do conf lockMap moc_fild17
+	do conf sellAuto_npc moc_ruins 91 128
+	do conf storageAuto_npc moc_ruins 59 157
+	do conf storageAuto_npc_steps c r0 r0
+	do ai on
+	do autostorage
+}
+
+macro eden60 {
+	do ai manual
+	do move moc_para01 22 30
+	pause 5
+	do talknpc 23 35 r0 r1
+	pause 5
+	do move 30 10
+	pause 5
+	do move comodo 174 354
+	pause 5
+	do talknpc 173 354
+	pause 5
+	do quest list
+}
+
+macro eden60done {
+	do ai manual
+	do move moc_para01 22 30
+	pause 5
+	do talknpc 23 35 c
+	pause 5
+	do move moc_para01 111 83
+}

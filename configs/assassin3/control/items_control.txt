@@ -57,7 +57,7 @@ Yellow Butterfly Wing 1000 1 0
 Old Battle Manual 1000 1 0
 Awakening Potion 20 1 0
 Jamadhar 1 1 0
-Eden Dagger I 1 1 0
+Meat 100 1 0
 
 602 10 1 0 # Butterfly Wing
 601 100 1 0 # Fly Wing
@@ -251,7 +251,6 @@ Hallberd [2] 0 0 1
 1355 0 0 1 # Hammer [3]
 1909 0 0 1 # Harp [1]
 1910 0 0 1 # Harp [2]
-1255 0 0 1 # Jamadhar
 1403 0 0 1 # Javelin
 1401 0 0 1 # Javelin [3]
 1402 0 0 1 # Javelin [4]

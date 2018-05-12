@@ -109,13 +109,7 @@ prontera 35 208 comodo 209 143 3000 c r2 c r6
 prontera 35 208 umbala 100 154 3000 c r2 c r7
 prontera 98 120 yuno 157 167 1800 c c r0 c
 geffen 120 62 prontera 116 72 1200 c r2 c r0
-geffen 120 62 aldebaran 168 112 1200 c r2 c r1
-geffen 120 62 gef_fild10 52 326 1200 c r2 c r2
-geffen 120 62 mjolnir_02 99 351 1700 c r2 c r3
 geffen 203 123 prontera 116 72 1200 c r2 c r0
-geffen 203 123 aldebaran 168 112 1200 c r2 c r1
-geffen 203 123 gef_fild10 52 326 1200 c r2 c r2
-geffen 203 123 mjolnir_02 99 351 1700 c r2 c r3
 aldebaran 143 119 geffen 120 39 2000 c r2 c r0
 izlude 134 88 prontera 116 72 2000 c r2 c r0
 yuno 152 187 einbroch 67 195 2000 c r2 c r0
@@ -791,14 +785,11 @@ gef_fild13 112 269 gefg_cas03 103 283
 gef_fild13 139 240 gefg_cas03 130 250
 gef_fild13 150 54 gefg_cas01 34 136
 gef_fild13 196 281 gefg_cas04 24 145
-gef_fild13 200 25 gef_fild14 180 360
 gef_fild13 210 75 gefg_cas01 99 178
 gef_fild13 256 57 gefg_cas05 7 134
 gef_fild13 305 83 gefg_cas05 99 204
 gef_fild13 308 244 gefg_cas02 70 147
 gef_fild13 380 56 gef_fild09 23 56
-gef_fild14 180 360 gef_fild13 200 25
-gef_fild14 371 219 gef_fild10 27 219
 gef_tower 38 160 gef_tower 42 86
 gef_tower 42 86 gef_tower 38 160
 gef_tower 42 86 gef_tower 66 156
@@ -3195,3 +3186,4 @@ izlude_a 125 257 iz_ac01_a 99 29
 iz_ac02_a 113 27 iz_ac01_a 78 25
 iz_ac01_a 78 25 iz_ac02_a 104 27
 iz_ac02_a 94 27 iz_ac01_a 78 28
+in_moc_16 182 169 in_moc_16 182 169
