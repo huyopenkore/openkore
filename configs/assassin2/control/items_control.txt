@@ -68,7 +68,7 @@ Meat 100 1 0
 546 50 1 0 # Condensed Yellow Potion
 506 0 1 0 # Green Potion
 501 25 1 0 # Red Potion
-502 25 1 0 # Orange Potion
+502 100 1 0 # Orange Potion
 504 50 1 0  # White Potion
 503 25 1 0 # Yellow potion
 

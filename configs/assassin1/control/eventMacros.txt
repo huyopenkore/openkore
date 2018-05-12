@@ -313,3 +313,17 @@ macro eden60done {
 	pause 5
 	do move moc_para01 111 83
 }
+
+macro einbech {
+	do ai manual
+	do move einbech 181 132
+	pause 5
+	do talknpc 181 132 r0
+	do conf saveMap einbech
+	do conf lockMap ein_fild08
+	do conf sellAuto_npc ein_in01 189 15
+	do conf storageAuto_npc einbech 181 132
+	do conf storageAuto_npc_steps c r1 r0
+	do ai on
+	do autostorage
+}

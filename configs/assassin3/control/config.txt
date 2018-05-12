@@ -189,7 +189,7 @@ itemsCheckWeight 1
 #lockMap hu_fild06
 #lockMap cmd_fild06
 #lockMap pay_fild01
-lockMap moc_fild17
+lockMap ein_fild08
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -219,7 +219,7 @@ runFromTarget_dist 6
 
 #saveMap payon
 #saveMap hugel
-saveMap morocc
+saveMap einbech
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
 memo1
@@ -243,7 +243,7 @@ sitAuto_look_from_wall
 sitTensionRelax 0
 
 statsAddAuto 1
-statsAddAuto_list 22 dex, 61 agi, 29 dex, 71 agi, 41 dex, 12 luk, 61 dex, 82 agi, 68 dex
+statsAddAuto_list 22 dex, 61 agi, 29 dex, 71 agi, 41 dex, 12 luk, 61 dex, 82 agi, 68 dex, 70 dex, 84 agi, 99 str
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
@@ -678,8 +678,8 @@ monsterSkill {
 	# Target Monster Conditions
 }
 
-autoSwitch_default_rightHand
-autoSwitch_default_leftHand
+autoSwitch_default_rightHand Eden Group Dagger III
+autoSwitch_default_leftHand Eden Dagger II
 autoSwitch_default_arrow
 
 # NOTE: In the case of two handed weapons, or no Shield,
@@ -759,11 +759,11 @@ useSelf_item {
 	manualAI 0
 }
 
-useSelf_item Red Herb, Yellow Herb, Meat, Carrot, Apple, Potato, Milk, White Potion, Novice Potion {
+useSelf_item Red Herb, Yellow Herb, Meat, Orange Potion, Carrot, Apple, Potato, Milk, White Potion, Novice Potion {
 	hp < 70%
 }
 
-useSelf_item Red Herb, Yellow Herb, Meat, Carrot, Apple, Potato, Milk, White Potion {
+useSelf_item Red Herb, Yellow Herb, Meat, Orange Potion, Carrot, Apple, Potato, Milk, White Potion {
 	weight > 47%
 	inLockOnly 1
 }
@@ -781,19 +781,19 @@ useSelf_item Red Herb, Yellow Herb, Meat, Carrot, Apple, Potato, Milk, White Pot
 # hugel 88 168 c r1 r0
 # moc_ruins 59 157 c r0 r0
 
-buyAuto Meat {
-	npc moc_ruins 87 109
+buyAuto Orange Potion {
+	npc ein_in01 189 15
 	standpoint
 	distance 5
 	price
 	minAmount 0
-	maxAmount 50
+	maxAmount 75
 	batchSize
 	disabled 0
 }
 
 buyAuto Butterfly Wing {
-	npc moc_ruins 91 128
+	npc ein_in01 189 15
 	standpoint
 	distance 5
 	price
@@ -804,7 +804,7 @@ buyAuto Butterfly Wing {
 }
 
 buyAuto Awakening Potion {
-	npc moc_ruins 91 128
+	npc ein_in01 189 15
 	standpoint
 	distance 5
 	price
@@ -815,17 +815,17 @@ buyAuto Awakening Potion {
 }
 
 sellAuto 1
-sellAuto_npc moc_ruins 91 128
+sellAuto_npc ein_in01 189 15
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s
 
 storageAuto 1
-storageAuto_npc moc_ruins 59 157
+storageAuto_npc einbech 181 132
 storageAuto_standpoint
 storageAuto_distance 5
 storageAuto_npc_type 3
-storageAuto_npc_steps c r0 r0
+storageAuto_npc_steps c r1 r0
 storageAuto_password
 storageEncryptKey
 storageAuto_keepOpen 0
