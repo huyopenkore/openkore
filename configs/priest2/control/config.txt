@@ -817,7 +817,7 @@ sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s
 
-storageAuto 0
+storageAuto 1
 storageAuto_npc einbech 181 132
 storageAuto_standpoint
 storageAuto_distance 5
