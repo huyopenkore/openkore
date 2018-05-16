@@ -189,7 +189,7 @@ itemsCheckWeight 1
 #lockMap hu_fild06
 #lockMap cmd_fild06
 #lockMap pay_fild01
-lockMap ein_fild08
+lockMap ein_fild09
 lockMap_x
 lockMap_y
 lockMap_randX
