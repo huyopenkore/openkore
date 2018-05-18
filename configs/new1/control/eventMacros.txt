@@ -1,0 +1,301 @@
+automacro huy {
+	InMap iz_int
+	BaseLevel = 1
+	run-once 1
+	call setup
+}
+
+macro setup {
+	do conf autoTalkCont 1
+	do conf route_randomWalk 0
+	do conf attackAuto 0
+	do conf lockMap 0
+	do conf skillsAddAuto 1
+	do conf relogAfterStorage 0
+	do conf sellAuto 0
+	do conf storageAuto 0
+	call chat1
+}
+
+macro chat1 {
+	do talknpc 100 91 c c c c c c c n
+	pause 5
+	do move 96 73
+	pause 5
+	do talknpc 198 213 c c c r0 c c c c c c c c c c n
+	pause 5
+	do move 125 202
+	pause 5
+	do talknpc 120 207 c r0 c c c c c c c c n
+	pause 5
+	do move 50 97
+	pause 5
+	do talknpc 45 94 c c r0 c r0 c c n
+	pause 5
+	do move 172 72
+	pause 5
+	do talknpc 179 75 c c r0 c c c n
+	pause 5
+	do move 203 166
+	pause 5
+	do talknpc 207 167 c c c r0 c r0 c c n
+	pause 5
+	do move 128 205
+	pause 5
+	do talknpc 120 207 c c r0 c c r0 c c c c c c c n
+	pause 5
+	do talknpc 122 207 c c c c c c c c c c n
+	pause 5
+	do is Apple Juice
+	pause 5
+	do talknpc 122 207 c c c r1 c c c c n
+	pause 5
+	do move 125 257
+	pause 5
+	do talknpc 100 39 c c r0 c c c n
+	pause 5
+	do eq Tattered Novice Ninja Suit
+	pause 5
+	do eq Somber Novice Hood
+	pause 5
+	do eq Novice Slippers
+	pause 5
+	do eq Novice Guard
+	pause 5
+	do eq Criatura Academy Hat [1]
+	pause 5
+	do eq Novice Main Gauche
+	pause 5
+	do move 66 74
+	pause 5
+	do talknpc 59 83 c r1 n
+	pause 5
+	do conf attackAuto 2
+	pause 5
+	do conf route_randomWalk 1
+	pause 5
+}
+
+automacro isJob10 {
+	JobID 0
+	JobLevel = 10
+	run-once 1
+	InInventory "Stone" < 1
+	call chat2
+}
+
+macro chat2 {
+	do conf attackAuto 0
+	do conf route_randomWalk 0
+	do skills add 1
+	do skills add 1
+	do skills add 1
+	do skills add 1
+	do skills add 1
+	do skills add 1
+	do skills add 1
+	do skills add 1
+	do skills add 1
+	do move 371 212
+	pause 5
+	do move 96 125
+	pause 5
+	do talknpc 96 125 r0 r0 r2
+	pause 5
+	do talknpc 96 125 r1
+	pause 5
+	do talknpc 96 125 c
+	pause 5
+	do eq Cotton Shirt [1]
+	do talknpc 96 125 r0
+	pause 5
+	do talknpc 108 139 r1 r0 r0 r0
+	pause 5
+	do eq Cotton Shirt [HP+100:SP+50] [1]
+	pause 5
+	do move 125 257
+	pause 5
+	do move 78 25
+	pause 5
+	do move 156 169
+	pause 5
+	do talknpc 156 169 r3
+	pause 5
+	do eq Criatura Academy Hat [1]
+	do eq Cotton Shirt [HP+100:SP+50] [1]
+	do eq Novice Mace [3]
+	pause 5
+	do move 101 176
+	pause 5
+	do talknpc 101 176 r2 r1 r2 r1
+	pause 5
+	do move prt_fild05 290 224
+	pause 5
+	do talknpc 290 224 r0
+	pause 5
+	do conf saveMap prt_fild05
+	do conf lockMap mjolnir_09
+	do conf attackAuto 2
+	do conf route_randomWalk 1
+	do conf sellAuto 1
+	do conf sellAuto_npc prt_fild05 290 221
+	do conf storageAuto 1
+	do conf storageAuto_npc prt_fild05 290 224
+	do conf storageAuto_npc_steps c r1 r0
+	do ai off
+}
+
+
+macro eden {
+	do ai manual
+	do move moc_para01 22 30
+	pause 5
+	do talknpc 27 35 c r1 c r0 t="abc" t="abc" r3
+	pause 5
+	do talknpc 25 35 r1 r0 r0
+	pause 5
+	do move 30 10
+	pause 5
+	do move pay_arche 41 136
+	pause 5
+	do talknpc 41 136 c
+	do quest list
+}
+
+macro edendone {
+	do ai manual
+	do move moc_para01 22 30
+	pause 5
+	do talknpc 25 35 c
+	pause 5
+	do move moc_para01 112 95
+	pause 5
+	do talknpc 112 96 r0 r1
+	pause 5
+	do eq Eden Dagger I
+	do eq Eden Group Boots II
+	do eq Eden Group Uniform II
+	do eq Eden Group Hat
+	do eq Eden Group Manteau
+	do move 30 10
+	call geffen
+}
+
+macro geffen {
+	do ai manual
+	do move geffen 125 61
+	pause 5
+	do talknpc 120 62 r0
+	do conf saveMap geffen
+	do conf lockMap gef_fild04
+	do conf sellAuto_npc geffen_in 77 167
+	do conf storageAuto_npc geffen 120 62
+	do conf storageAuto_npc_steps c r1 r0
+}
+
+macro payon {
+	do ai manual
+	do move payon 180 104
+	pause 5
+	do talknpc 181 104 r0
+	do conf saveMap payon
+	do conf lockMap pay_fild07
+	do conf sellAuto_npc payon 159 96
+	do conf storageAuto_npc payon 181 104
+	do conf storageAuto_npc_steps c r1 r0
+}
+
+macro eden50 {
+	do ai manual
+	do move moc_para01 22 30
+	pause 5
+	do talknpc 25 35 r0
+	pause 5
+	do move 30 10
+	pause 5
+	do move in_orcs01 38 171
+	pause 5
+	do talknpc 38 175 c
+	pause 5
+	do quest list
+}
+
+macro eden50done {
+	do ai manual
+	do move moc_para01 22 30
+	pause 5
+	do talknpc 25 35 c
+	pause 5
+	do move moc_para01 112 95
+	pause 5
+	do talknpc 112 96 r0 r1
+	pause 5
+	do eq Eden Group Boots III
+	do eq Eden Group Uniform III
+	do move 30 10
+}
+
+macro jamadhar {
+	do ai manual
+	do move morocc_in 135 65
+	pause 5
+	do talknpc 141 67
+	pause 5
+	do store
+	pause 2
+	do buy 14 1
+	pause 2
+	do eq Jamadhar
+}
+
+macro morocc {
+	do ai manual
+	do move morocc 160 258
+	pause 5
+	do talknpc 160 258 r0
+	do conf saveMap morocc
+	do conf lockMap moc_fild17
+	do conf sellAuto_npc moc_ruins 91 128
+	do conf storageAuto_npc moc_ruins 59 157
+	do conf storageAuto_npc_steps c r0 r0
+	do ai on
+	do autostorage
+}
+
+macro eden60 {
+	do ai manual
+	do move moc_para01 22 30
+	pause 5
+	do talknpc 23 35 r0 r1
+	pause 5
+	do move 30 10
+	pause 5
+	do move comodo 174 354
+	pause 5
+	do talknpc 173 354
+	pause 5
+	do quest list
+}
+
+macro eden60done {
+	do ai manual
+	do move moc_para01 22 30
+	pause 5
+	do talknpc 23 35 c
+	pause 5
+	do move moc_para01 111 83
+}
+
+macro einbech {
+	do ai manual
+	do move einbech 181 132
+	pause 5
+	do talknpc 181 132 r0
+	do conf saveMap einbech
+	do conf lockMap ein_fild08
+	do conf sellAuto_npc ein_in01 189 15
+	do conf storageAuto_npc einbech 181 132
+	do conf storageAuto_npc_steps c r1 r0
+	do ai on
+	do autostorage
+}
