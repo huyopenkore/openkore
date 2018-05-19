@@ -248,7 +248,7 @@ statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
 skillsAddAuto 1
-skillsAddAuto_list Divine Protection 5, Blessing 10, Heal 3, Increase Agi 10, Heal 6, Ruwach 1, Teleport 2, Divine Protection 10, Demon Bane 10, Iron Fists 2, Summon Spirit Sphere 5, Iron Fists 5, Flee 5, Raging Trifecta Blow 10, Root 2, Flee 10, Spiritual Cadence 5, Heal 10, Iron Fists 10
+skillsAddAuto_list Divine Protection 5, Blessing 10, Heal 3, Increase Agi 10, Heal 6, Ruwach 1, Teleport 2, Divine Protection 10, Demon Bane 10, Iron Fists 2, Summon Spirit Sphere 5, Iron Fists 5, Flee 5, Raging Trifecta Blow 10, Root 2, Spiritual Cadence 5, Flee 10, Heal 10, Iron Fists 10
 
 tankMode 0
 tankModeTarget
@@ -762,7 +762,7 @@ buyAuto Awakening Potion {
 	distance 5
 	price
 	minAmount 0
-	maxAmount 6
+	maxAmount 12
 	batchSize
 	disabled 0
 }
