@@ -248,6 +248,20 @@ macro jamadhar {
 	do eq Jamadhar
 }
 
+macro hugel {
+	do ai manual
+	do move hugel 88 169
+	pause 5
+	do talknpc 88 168 r0
+	do conf saveMap hugel
+	do conf lockMap hu_fild06
+	do conf sellAuto_npc hu_in01 241 368
+	do conf storageAuto_npc hugel 88 168
+	do conf storageAuto_npc_steps c r1 r0
+	do ai on
+	do autostorage
+}
+
 macro morocc {
 	do ai manual
 	do move morocc 160 258
