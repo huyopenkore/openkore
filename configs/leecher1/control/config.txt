@@ -198,8 +198,8 @@ itemsCheckWeight 1
 #lockMap_x 366
 #lockMap_y 360
 lockMap ein_fild08
-lockMap_x 358
-lockMap_y 130
+lockMap_x 164
+lockMap_y 377
 #lockMap ein_fild09
 #lockMap_x 74
 #lockMap_y 350

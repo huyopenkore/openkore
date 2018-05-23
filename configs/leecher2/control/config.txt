@@ -197,12 +197,12 @@ itemsCheckWeight 1
 #lockMap cmd_fild06
 #lockMap_x 366
 #lockMap_y 361
-#lockMap ein_fild08
-#lockMap_x 358
-#lockMap_y 131
-lockMap ein_fild09
-lockMap_x 75
-lockMap_y 350
+lockMap ein_fild08
+lockMap_x 165
+lockMap_y 377
+#lockMap ein_fild09
+#lockMap_x 75
+#lockMap_y 350
 
 route_escape_reachedNoPortal 1
 route_escape_randomWalk 1
