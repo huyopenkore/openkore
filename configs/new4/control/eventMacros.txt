@@ -170,15 +170,14 @@ macro edendone {
 	pause 5
 	do move moc_para01 112 95
 	pause 5
-	do talknpc 112 96 r0 r1
+	do talknpc 112 96 r0 r1 r1
 	pause 5
-	do eq Eden Dagger I
+	do eq Eden Mace I
 	do eq Eden Group Boots II
 	do eq Eden Group Uniform II
 	do eq Eden Group Hat
 	do eq Eden Group Manteau
 	do move 30 10
-	call geffen
 }
 
 macro geffen {
@@ -228,8 +227,9 @@ macro eden50done {
 	pause 5
 	do move moc_para01 112 95
 	pause 5
-	do talknpc 112 96 r0 r1
+	do talknpc 112 96 r0 r1 r1
 	pause 5
+	do eq Eden Mace II
 	do eq Eden Group Boots III
 	do eq Eden Group Uniform III
 	do move 30 10

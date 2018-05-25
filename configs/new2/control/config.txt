@@ -189,7 +189,7 @@ itemsCheckWeight 1
 #lockMap hu_fild06
 #lockMap cmd_fild06
 #lockMap pay_fild01
-lockMap ein_fild08
+lockMap moc_fild17
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -219,7 +219,7 @@ runFromTarget_dist 6
 
 #saveMap payon
 #saveMap hugel
-saveMap einbech
+saveMap morocc
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand
 memo1
@@ -243,7 +243,7 @@ sitAuto_look_from_wall
 sitTensionRelax 0
 
 statsAddAuto 1
-statsAddAuto_list 22 dex, 31 str, 51 agi, 31 dex, 41 str, 61 agi, 41 dex, 51 str, 71 agi, 51 dex, 9 luk, 61 str, 81 agi, 61 dex, 72 str, 99 agi
+statsAddAuto_list 21 dex, 31 str, 51 agi, 31 dex, 41 str, 61 agi, 41 dex, 51 str, 71 agi, 51 dex, 9 luk, 61 str, 81 agi, 61 dex, 72 str, 99 agi
 statsAddAuto_dontUseBonus 1
 statsAdd_over_99 1
 
@@ -764,21 +764,21 @@ buyAuto Awakening Potion {
 	minAmount 0
 	maxAmount 12
 	batchSize
-	disabled 0
+	disabled 1
 }
 
 sellAuto 1
-sellAuto_npc ein_in01 189 15
+sellAuto_npc moc_ruins 91 128
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s
 
 storageAuto 1
-storageAuto_npc einbech 181 132
+storageAuto_npc moc_ruins 59 157
 storageAuto_standpoint
 storageAuto_distance 5
 storageAuto_npc_type 3
-storageAuto_npc_steps c r1 r0
+storageAuto_npc_steps c r0 r0
 storageAuto_password
 storageEncryptKey
 storageAuto_keepOpen 0
