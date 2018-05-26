@@ -298,6 +298,15 @@ macro eden60done {
 	do talknpc 23 35 c
 	pause 5
 	do move moc_para01 111 83
+	pause 5
+	do talknpc 111 83 r2 r1 r0
+	pause 5
+	do eq Eden Group Mace3
+	do eq Eden Group Hat II [1]
+	do eq Eden Group Armor
+	do eq Eden Group Manteau II
+	do eq Eden Group Boots IV
+	do move 30 10
 }
 
 macro einbech {
