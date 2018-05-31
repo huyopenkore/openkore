@@ -75,6 +75,14 @@ Meat 100 1 0
 #########################
 ##### SELLING ITEMS #####
 #########################
+Crimson Revolver [2] 0 0 1
+Crimson Dagger [Ice] [2] 0 0 1
+Crimson Dagger [Wind] [2] 0 0 1
+Crimson Dagger [2] 0 0 1
+Crimson Dagger [Fire] [2] 0 0 1
+Crimson Dagger [Dark] [2] 0 0 1
+Crimson Dagger [Earth] [2] 0 0 1
+Crimson Dagger [Holy] [2] 0 0 1
 
 Arrow 0 0 1
 Novice False Eggshell 0 0 1
