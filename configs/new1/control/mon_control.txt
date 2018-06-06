@@ -64,3 +64,4 @@ Green Plant 0
 Shining Plant 0
 Red Mushroom 0
 Resting 0
+Creamy 1 0 0 0 12

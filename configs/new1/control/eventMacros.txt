@@ -18,85 +18,49 @@ macro setup {
 }
 
 macro chat1 {
-	do talknpc 100 91 c c c c c c c n
+	do talknpc 100 91
 	pause 5
 	do move 96 73
 	pause 5
-	do talknpc 198 213 c c c r0 c c c c c c c c c c n
+	do talknpc 198 213 r0
 	pause 5
 	do move 125 202
 	pause 5
-	do talknpc 120 207 c r0 c c c c c c c c n
+	do talknpc 120 207 r0
 	pause 5
 	do move 50 97
 	pause 5
-	do talknpc 45 94 c c r0 c r0 c c n
+	do talknpc 45 94 r0 r0
 	pause 5
 	do move 172 72
 	pause 5
-	do talknpc 179 75 c c r0 c c c n
+	do talknpc 179 75 r0
 	pause 5
 	do move 203 166
 	pause 5
-	do talknpc 207 167 c c c r0 c r0 c c n
+	do talknpc 207 167 r0 r0
 	pause 5
 	do move 128 205
 	pause 5
-	do talknpc 120 207 c c r0 c c r0 c c c c c c c n
+	do talknpc 120 207 r0 r0
 	pause 5
-	do talknpc 122 207 c c c c c c c c c c n
+	do talknpc 122 207
 	pause 5
 	do is Apple Juice
 	pause 5
-	do talknpc 122 207 c c c r1 c c c c n
+	do talknpc 122 207 r1
 	pause 5
 	do move 125 257
 	pause 5
-	do talknpc 100 39 c c r0 c c c n
+	do talknpc 100 39 r0
 	pause 5
 	do eq Tattered Novice Ninja Suit
-	pause 5
 	do eq Somber Novice Hood
-	pause 5
 	do eq Novice Slippers
-	pause 5
 	do eq Novice Guard
-	pause 5
 	do eq Criatura Academy Hat [1]
-	pause 5
 	do eq Novice Main Gauche
-	pause 5
-	do move 66 74
-	pause 5
-	do talknpc 59 83 c r1 n
-	pause 5
-	do conf attackAuto 2
-	pause 5
-	do conf route_randomWalk 1
-	pause 5
-}
-
-automacro isJob10 {
-	JobID 0
-	JobLevel = 10
-	run-once 1
-	InInventory "Stone" < 1
-	call chat2
-}
-
-macro chat2 {
-	do conf attackAuto 0
-	do conf route_randomWalk 0
-	do skills add 1
-	do skills add 1
-	do skills add 1
-	do skills add 1
-	do skills add 1
-	do skills add 1
-	do skills add 1
-	do skills add 1
-	do skills add 1
-	do move 371 212
+	do move 100 24
 	pause 5
 	do move 96 125
 	pause 5
@@ -104,7 +68,7 @@ macro chat2 {
 	pause 5
 	do talknpc 96 125 r1
 	pause 5
-	do talknpc 96 125 c
+	do talknpc 96 125
 	pause 5
 	do eq Cotton Shirt [1]
 	do talknpc 96 125 r0
@@ -112,6 +76,23 @@ macro chat2 {
 	do talknpc 108 139 r1 r0 r0 r0
 	pause 5
 	do eq Cotton Shirt [HP+100:SP+50] [1]
+	do move 21 98
+	pause 5
+	do conf attackAuto 2
+	do conf route_randomWalk 1
+}
+
+automacro isJob10 {
+	JobID 0
+	JobLevel = 10
+	run-once 1
+	call chat2
+}
+
+macro chat2 {
+	do conf attackAuto 0
+	do conf route_randomWalk 0
+	do move 371 212
 	pause 5
 	do move 125 257
 	pause 5
@@ -129,28 +110,29 @@ macro chat2 {
 	pause 5
 	do talknpc 101 176 r2 r1 r2 r1
 	pause 5
-	do move prt_fild05 290 224
+	do move prontera 32 204
 	pause 5
-	do talknpc 290 224 r0
+	do talknpc 35 208 r0
 	pause 5
-	do conf saveMap prt_fild05
-	do conf lockMap mjolnir_09
+	do conf saveMap prontera
+	do conf lockMap prt_fild07
 	do conf attackAuto 2
 	do conf route_randomWalk 1
 	do conf sellAuto 1
-	do conf sellAuto_npc prt_fild05 290 221
+	do conf sellAuto_npc prt_in 126 76
 	do conf storageAuto 1
-	do conf storageAuto_npc prt_fild05 290 224
+	do conf storageAuto_npc prontera 35 208
 	do conf storageAuto_npc_steps c r1 r0
-	do ai off
+	do move moc_para01 22 30
+	pause 5
+	do talknpc 27 35 c r1 c r0 t="abc" t="abc" r3
+	pause 5
+	do move 30 10
 }
-
 
 macro eden {
 	do ai manual
 	do move moc_para01 22 30
-	pause 5
-	do talknpc 27 35 c r1 c r0 t="abc" t="abc" r3
 	pause 5
 	do talknpc 25 35 r1 r0 r0
 	pause 5
@@ -321,4 +303,83 @@ macro einbech {
 	do conf storageAuto_npc_steps c r1 r0
 	do ai on
 	do autostorage
+}
+
+macro monk1 {
+	do move prt_monk 59 247
+	pause 5
+	do talknpc 59 247 r1 r1
+	pause 5
+	do move monk_in 99 58
+	pause 5
+	do talknpc 99 58 r0
+}
+
+macro monk2 {
+	do move monk_in 99 58
+	pause 5
+	do talknpc 99 58
+	pause 5
+	do move prt_monk 251 255
+	pause 5
+	do talknpc 251 255 r0 r1 r7 r2 r4 r3 r6 r2 r0 r3 r9
+}
+
+macro monk3 {
+	do move prt_monk 57 179
+	pause 5
+	do talknpc 57 179 r0 r0 r1 r3 r0
+	pause 5
+	do move monk_test 329 61
+	pause 5
+	do talknpc 329 61 r0
+	do conf lockMap 0
+	do conf sellAuto 0
+	do conf storageAuto 0
+	do ai on
+}
+
+automacro enoughMushroom {
+	InInventory "Orange Gooey Mushroom" > 29
+	run-once 1
+	call monk4
+}
+
+macro monk4 {
+	do ai manual
+	do move 225 180
+	pause 5
+	do talknpc 225 180
+	pause 5
+	do move monk_test 319 139
+	pause 5
+	do talknpc 319 139
+	pause 5
+	do move monk_test 166 278
+	pause 5
+	do move monk_test 319 139
+	pause 5
+	do talknpc 319 139
+	pause 5
+	do is Green Potion
+	do move monk_in 99 58
+	pause 5
+	do talknpc 99 58 r0 r1 r0 r0 r1 r1 r0 r0
+	pause 5
+	do move prt_monk
+	do conf sellAuto 1
+	do conf storageAuto 1
+}
+
+macro fist {
+	do ai manual
+	do move ein_in01 106 27
+	pause 5
+	do talknpc 106 27
+	pause 5
+	do store
+	pause 5
+	do buy 33
+	pause 5
+	do eq Fist
 }
