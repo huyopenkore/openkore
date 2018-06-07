@@ -163,7 +163,6 @@ macro edendone {
 }
 
 macro geffen {
-	do ai manual
 	do move geffen 125 61
 	pause 5
 	do talknpc 120 62 r0
@@ -175,7 +174,6 @@ macro geffen {
 }
 
 macro payon {
-	do ai manual
 	do move payon 180 104
 	pause 5
 	do talknpc 181 104 r0
@@ -231,7 +229,6 @@ macro jamadhar {
 }
 
 macro hugel {
-	do ai manual
 	do move hugel 88 169
 	pause 5
 	do talknpc 88 168 r0
@@ -240,12 +237,10 @@ macro hugel {
 	do conf sellAuto_npc hu_in01 241 368
 	do conf storageAuto_npc hugel 88 168
 	do conf storageAuto_npc_steps c r1 r0
-	do ai on
 	do autostorage
 }
 
 macro morocc {
-	do ai manual
 	do move morocc 160 258
 	pause 5
 	do talknpc 160 258 r0
@@ -254,7 +249,6 @@ macro morocc {
 	do conf sellAuto_npc moc_ruins 91 128
 	do conf storageAuto_npc moc_ruins 59 157
 	do conf storageAuto_npc_steps c r0 r0
-	do ai on
 	do autostorage
 }
 
@@ -292,7 +286,6 @@ macro eden60done {
 }
 
 macro einbech {
-	do ai manual
 	do move einbech 181 132
 	pause 5
 	do talknpc 181 132 r0
@@ -301,7 +294,6 @@ macro einbech {
 	do conf sellAuto_npc ein_in01 189 15
 	do conf storageAuto_npc einbech 181 132
 	do conf storageAuto_npc_steps c r1 r0
-	do ai on
 	do autostorage
 }
 
@@ -382,4 +374,11 @@ macro fist {
 	do buy 33
 	pause 5
 	do eq Fist
+}
+
+automacro lvlasked {
+	PartyMsg /level/
+	call {
+		do p base $.lvl job $.joblvl zenny $.zeny
+	}
 }
